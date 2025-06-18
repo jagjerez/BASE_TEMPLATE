@@ -1,0 +1,7 @@
+<select [value]="currentLang" (change)="changeLang($event)"
+    class="appearance-none bg-white dark:bg-gray-800 text-sm text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600 rounded px-2 py-1">
+    <option *ngFor="let lang of availableLangs" [value]="lang"
+        class="bg-white dark:bg-gray-800 text-black dark:text-white">
+        {{ lang.toUpperCase() }}
+    </option>
+</select>

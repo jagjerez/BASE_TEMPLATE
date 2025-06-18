@@ -1,0 +1,9 @@
+{
+    "MAINTENANCE_SETTINGS": {
+        "TITLE": "Example title",
+        "MENU": {
+            "ORDER_WORK": "order work",
+            "MAINTENANCE": "maintenance"
+        }
+    }
+}
