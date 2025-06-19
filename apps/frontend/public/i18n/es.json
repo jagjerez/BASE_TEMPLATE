@@ -4,6 +4,14 @@
         "MENU": {
             "ORDER_WORK": "orden de trabajo",
             "MAINTENANCE": "mantenimiento"
+        },
+        "LOGIN": {
+            "TITLE": "Iniciar sesión",
+            "EMAIL": "Correo electrónico",
+            "PASSWORD": "Contraseña",
+            "SUBMIT": "Enviar",
+            "FORGOT_PASSWORD": "¿Olvidaste tu contraseña?",
+            "CREATE_ACCOUNT": "Crear una cuenta"
         }
     }
 }

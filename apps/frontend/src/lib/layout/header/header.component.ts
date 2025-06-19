@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
 import { LanguageSwitcher } from '../../components/language-switcher';
@@ -11,6 +11,8 @@ import { ThemeService } from '../../../services/theme.service';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
+  @Input() title!: string;
+
   constructor(
     public themeService: ThemeService) {}
 
