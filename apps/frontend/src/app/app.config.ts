@@ -12,6 +12,7 @@ import {
 import {provideTranslateService, TranslateLoader} from "@ngx-translate/core";
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { providerAuthConfiguration } from '../lib/auth/config/providerAuthConfiguration';
 
 const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: HttpClient) =>
     new TranslateHttpLoader(http, './i18n/', '.json');
@@ -29,6 +30,9 @@ export const appConfig: ApplicationConfig = {
         useFactory: httpLoaderFactory,
         deps: [HttpClient],
       },
+    }),
+    providerAuthConfiguration({
+      apiUrl: 'http://localhost:1337',
     })
   ],
 };

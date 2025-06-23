@@ -1,12 +1,14 @@
 // theme.service.ts
 import { isPlatformBrowser } from '@angular/common';
-import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { inject, Inject, Injectable, PLATFORM_ID } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class ThemeService {
   private readonly className = 'dark';
   private readonly storageKey = 'theme';
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  private platformId = inject(PLATFORM_ID) as object;
+
+  constructor() {
     this.initializeTheme();
   }
 

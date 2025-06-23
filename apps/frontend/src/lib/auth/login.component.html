@@ -6,11 +6,11 @@
   <main class="flex-1 flex items-center justify-center px-4">
     <form (ngSubmit)="onSubmit()" class="w-full max-w-sm bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
       <h2 class="text-xl font-bold mb-4 text-center">{{ 'MAINTENANCE_SETTINGS.LOGIN.TITLE' | translate }}</h2>
-      <label class="block mb-2 text-sm font-medium">{{ 'MAINTENANCE_SETTINGS.LOGIN.EMAIL' | translate }}</label>
-      <input type="email" class="w-full mb-4 px-3 py-2 border rounded bg-transparent dark:border-gray-600" />
+      <label for="email" class="block mb-2 text-sm font-medium">{{ 'MAINTENANCE_SETTINGS.LOGIN.EMAIL' | translate }}</label>
+      <input id="email" name="email" [(ngModel)]="email" type="email" class="w-full mb-4 px-3 py-2 border rounded bg-transparent dark:border-gray-600" />
 
-      <label class="block mb-2 text-sm font-medium">{{ 'MAINTENANCE_SETTINGS.LOGIN.PASSWORD' | translate }}</label>
-      <input type="password" class="w-full mb-4 px-3 py-2 border rounded bg-transparent dark:border-gray-600" />
+      <label for="password" class="block mb-2 text-sm font-medium">{{ 'MAINTENANCE_SETTINGS.LOGIN.PASSWORD' | translate }}</label>
+      <input id="password" name="password" [(ngModel)]="password" type="password" class="w-full mb-4 px-3 py-2 border rounded bg-transparent dark:border-gray-600" />
 
       <button type="submit"
         class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded transition">{{ 'MAINTENANCE_SETTINGS.LOGIN.SUBMIT' | translate }}</button>

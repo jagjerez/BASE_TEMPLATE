@@ -1,4 +1,4 @@
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, inject, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -12,7 +12,10 @@ export class LanguageSwitcher {
   currentLang: string;
   availableLangs = ['en', 'es'];
 
-  constructor(private translate: TranslateService, @Inject(PLATFORM_ID) private platformId: Object) {
+  private translate = inject(TranslateService);
+  private platformId = inject(PLATFORM_ID);
+
+  constructor() {
     this.currentLang = this.getLanguage();
   }
 

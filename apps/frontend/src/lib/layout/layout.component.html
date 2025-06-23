@@ -24,7 +24,7 @@
                     <!-- Puedes mapear `r.data.icon` a un path o usar un componente externo -->
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="..." />
                 </svg>
-                {{ 'MAINTENANCE_SETTINGS.MENU.' + r.data?.label | translate }}
+                {{ 'MAINTENANCE_SETTINGS.MENU.' + r.data!['label'] | translate }}
             </a>
         </ng-container>
     </nav>
