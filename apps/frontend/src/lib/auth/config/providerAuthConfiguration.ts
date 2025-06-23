@@ -1,7 +1,5 @@
-import { inject, InjectionToken } from "@angular/core";
+import { inject, InjectionToken, provideAppInitializer } from "@angular/core";
 import { UserService } from "../services/user.services";
-import { HTTP_INTERCEPTORS, provideHttpClient } from "@angular/common/http";
-import { TokenInterceptor } from "../interceptors/token.interceptor";
 import { SessionService } from "../services/session.service";
 import { firstValueFrom, take } from "rxjs";
 
@@ -22,13 +20,7 @@ export function providerAuthConfiguration(config: AppCustomConfig) {
       useValue: config
     },
     UserService,
-    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
-    {
-      provide: 'APP_INITIALIZER',
-      useFactory: initializeApp,
-      deps: [SessionService, provideHttpClient],
-      multi: true
-    }
+    provideAppInitializer(() => initializeApp())
   ];
 }
 

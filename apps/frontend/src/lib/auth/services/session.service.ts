@@ -28,7 +28,11 @@ export class SessionService {
       return of(false);
     }
 
-    return this.http.get<User>(`${this.config.apiUrl}/api/users/me`).pipe(
+    return this.http.get<User>(`${this.config.apiUrl}/api/users/me`, {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }).pipe(
       tap(user => this.userService.setUser(user)),
       map(() => true),
       catchError(() => {

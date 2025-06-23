@@ -21,6 +21,7 @@ export class UserService {
   user$ = this.userSubject.asObservable();
 
   setUser(user: User) {
+    console.log('Setting user:', user);
     this.userSubject.next(user);
   }
 

@@ -12,6 +12,9 @@
             "SUBMIT": "Enviar",
             "FORGOT_PASSWORD": "¿Olvidaste tu contraseña?",
             "CREATE_ACCOUNT": "Crear una cuenta"
+        },
+        "LOGOUT": {
+            "TITLE": "Cerrar sesión"
         }
     }
 }

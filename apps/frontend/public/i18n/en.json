@@ -12,6 +12,9 @@
             "SUBMIT": "Submit",
             "FORGOT_PASSWORD": "Forgot password?",
             "CREATE_ACCOUNT": "Create an account"
+        },
+        "LOGOUT": {
+            "TITLE": "Logout"
         }
     }
 }
